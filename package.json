@@ -17,6 +17,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.1.0",
+		"@sveltejs/adapter-vercel": "^3.0.2",
 		"@sveltejs/kit": "^1.22.3",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"@typescript-eslint/parser": "^6.0.0",
@@ -34,8 +35,8 @@
 		"vite": "^4.4.4"
 	},
 	"dependencies": {
-		"sveltekit-i18n": "latest",
-		"@sveltekit-i18n/parser-icu": "latest"
+		"@sveltekit-i18n/parser-icu": "latest",
+		"sveltekit-i18n": "latest"
 	},
 	"type": "module"
 }
