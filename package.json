@@ -1,11 +1,11 @@
 {
-	"name": "svelte-i18n",
+	"name": "sveltekit-i18n",
 	"version": "0.0.1",
 	"private": true,
 	"author": {
 		"name": "Aakash Goplani"
 	},
-	"description": "i18n in SvelteKit with svelte-i18n",
+	"description": "i18n in SvelteKit with sveltekit-i18n",
 	"scripts": {
 		"dev": "vite dev --port 4200",
 		"build": "vite build",
