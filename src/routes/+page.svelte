@@ -4,14 +4,14 @@
   let value: string = 'en';
   let randomNumber = 0;
 
-  function handleLocaleChange(event: any) {
+  async function handleLocaleChange(event: any) {
     event.preventDefault();
     value = event?.target?.value;
     $locale = value;
-  }
-
-  function generatePluralString() {
-    randomNumber = Math.floor(Math.random() * (3+1 - 0) + 0);
+    await fetch('/api', {
+      body: JSON.stringify({locale:  $locale}),
+      method: 'POST'
+    });
   }
 
   function getCurrencyCode(): string {
@@ -51,13 +51,17 @@
       <p>{$t('body_text', { dateValue: Date.UTC(2023, 6, 14, 0, 0, 0, 0), download: 3722 }, { date: { year: "numeric", month: "long", day: "numeric" }})}</p>
 
       <div class="container__content__plural">
-        <button on:click={generatePluralString}>{$t('button_label')}</button>
+        <div class="container__content__plural__buttons">
+          <button class:active={randomNumber === 0} on:click={() => randomNumber = 0}>{$t('button_label_0', { value: 0 })}</button>
+          <button class:active={randomNumber === 1} on:click={() => randomNumber = 1}>{$t('button_label_1', { value: 1 })}</button>
+          <button class:active={randomNumber === 2} on:click={() => randomNumber = 2}>{$t('button_label_2', { value: 2 })}</button>
+        </div>
         <span>{$t('awards', { award: randomNumber })}</span>
       </div>
 
       <div class="container__content__formatter">
         <span><strong>Time: </strong>{$t('time')}</span>
-        <span><strong>Date: </strong>{$t('date', {value: new Date()}, { date: {year: "numeric", month: "long", day: "numeric"} })}</span>
+        <span><strong>Date: </strong>{$t('date', {val: new Date()}, { date: {year: "numeric", month: "long", day: "numeric"} })}</span>
         <span><strong>Currency: </strong>{$t('number', { value: 3722 }, { currency: { style: "currency", currency: getCurrencyCode() } })}</span>
       </div>
     </div>
@@ -99,10 +103,21 @@
 
       &__plural {
         display: flex;
+        flex-direction: column;
         margin: 1rem 0;
         
         button {
           margin-right: 2rem;
+        }
+
+        span {
+          margin-top: 1rem;
+        }
+
+        .active {
+          color: blue;
+          background-color: aliceblue;
+          padding: 0.5rem;
         }
       }
 

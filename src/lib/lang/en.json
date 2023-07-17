@@ -1,10 +1,12 @@
 {
   "heading": "Internationalization in SvelteKit",
   "toggle_label": "Select Locale",
-  "button_label": "Generate Awards",
+  "button_label_0": "{{value:number}}",
+  "button_label_1": "{{value:number}}",
+  "button_label_2": "{{value:number}}",
   "body_text": "This is a small example to demonstrate i18n functionality in SvelteKit using sveltekit-i18n library. sveltekit-i18n is a tiny library with no external dependencies, built for Svelte and SvelteKit. It glues @sveltekit-i18n/base and @sveltekit-i18n/parser-default together to provide you the most straightforward sveltekit-i18n solution. Total number of npm downloads per week as of {{dateValue:date}} are {{download:number}}.",
-  "awards": "You have {{award:gt; 0:{{not won any awards}} {{award; 1:won exactly {{award}} award; default:won {{award}} awards}}; default:not won any awards}}!",
-  "date": "{{value:date}}",
+  "awards":"You have {{award:gt; 0: {{award; 1:won exactly {{award}} award; default:won {{award}} awards}}; default:not won any awards}}!",
+  "date": "{{val:date}}",
   "time": "Only 'time' formatter is not available, it must be DateTime formatter",
   "number": "{{value:currency}}"
 }

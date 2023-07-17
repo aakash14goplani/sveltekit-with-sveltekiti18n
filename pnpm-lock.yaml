@@ -2,10 +2,10 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@sveltekit-i18n/parser-icu':
-    specifier: latest
+    specifier: ^1.0.8
     version: 1.0.8
   sveltekit-i18n:
-    specifier: latest
+    specifier: ^2.4.2
     version: 2.4.2(svelte@4.0.5)
 
 devDependencies:

@@ -35,8 +35,8 @@
 		"vite": "^4.4.4"
 	},
 	"dependencies": {
-		"@sveltekit-i18n/parser-icu": "latest",
-		"sveltekit-i18n": "latest"
+		"@sveltekit-i18n/parser-icu": "^1.0.8",
+		"sveltekit-i18n": "^2.4.2"
 	},
 	"type": "module"
 }

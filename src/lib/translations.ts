@@ -1,6 +1,20 @@
+import { writable } from 'svelte/store';
 import i18n, { type Config } from 'sveltekit-i18n';
+// import i18n from 'sveltekit-i18n';
+// import parser from '@sveltekit-i18n/parser-icu';
+// import type { Config } from '@sveltekit-i18n/parser-icu';
 
-const config: Config = {
+interface Params {
+	dateValue: number;
+	value: number;
+	download: number;
+	award: number;
+	val: Date;
+}
+
+const config: Config<Partial<Params>> = {
+	initLocale: 'en',
+	// parser: parser(),
 	loaders: [
 		{
 			locale: 'en',
@@ -20,4 +34,17 @@ const config: Config = {
 	]
 };
 
-export const { t, loading, locales, locale, loadTranslations, initialized } = new i18n(config);
+export const { t, loading, locales, locale, initialized, translations, loadTranslations } =
+	new i18n(config);
+
+export const selectedLocale = writable<string>('en');
+
+// Translations logs
+/* loading.subscribe(async ($loading) => {
+	if ($loading) {
+		console.log('Loading translations...');
+
+		await loading.toPromise();
+		console.log('Updated translations', translations.get());
+	}
+}); */
