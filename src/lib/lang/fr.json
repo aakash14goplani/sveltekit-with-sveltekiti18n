@@ -7,6 +7,6 @@
   "body_text": "Ceci est un petit exemple pour démontrer la fonctionnalité i18n dans SvelteKit en utilisant la bibliothèque sveltekit-i18n. sveltekit-i18n est une petite bibliothèque sans dépendances externes, conçue pour Svelte et SvelteKit. Il colle @sveltekit-i18n/base et @sveltekit-i18n/parser-default ensemble pour vous fournir la solution sveltekit-i18n la plus simple. Le nombre total de téléchargements npm par semaine au {{dateValue:date}} est de {{download:number}}.",
   "awards": "Vous {{award:gt; 0: {{award; 1:avez gagné exactement {{award}}; default: avez remporté {{award}} }}; default:n'avez remporté aucun }} prix",
   "date": "{{val:date}}",
-  "time": "Seul le formateur 'time' n'est pas disponible, il doit s'agir du formateur DateTime",
+  "time": "Seul le formateur 'time' n'est pas disponible, il doit s'agir du formateur DateTime. Créez le vôtre en utilisant des modifiers.",
   "number": "{{value:currency}}"
 }
