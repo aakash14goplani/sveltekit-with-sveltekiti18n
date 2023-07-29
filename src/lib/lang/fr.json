@@ -4,7 +4,7 @@
   "button_label_0": "{{value:number}}",
   "button_label_1": "{{value:number}}",
   "button_label_2": "{{value:number}}",
-  "body_text": "Ceci est un petit exemple pour démontrer la fonctionnalité i18n dans SvelteKit en utilisant la bibliothèque svelte-i18n. svelte-i18n vous aide à localiser votre application à l'aide des outils réactifs fournis par Svelte. En utilisant des magasins pour garder une trace des paramètres régionaux actuels, du dictionnaire des messages et pour formater les messages, nous gardons tout propre, synchronisé et facile à utiliser sur vos fichiers svelte. Le nombre total de téléchargements npm par semaine au {{dateValue:date}} est de {{download:number}}.",
+  "body_text": "Ceci est un petit exemple pour démontrer la fonctionnalité i18n dans SvelteKit en utilisant la bibliothèque sveltekit-i18n. sveltekit-i18n est une petite bibliothèque sans dépendances externes, conçue pour Svelte et SvelteKit. Il colle @sveltekit-i18n/base et @sveltekit-i18n/parser-default ensemble pour vous fournir la solution sveltekit-i18n la plus simple. Le nombre total de téléchargements npm par semaine au {{dateValue:date}} est de {{download:number}}.",
   "awards": "Vous {{award:gt; 0: {{award; 1:avez gagné exactement {{award}}; default: avez remporté {{award}} }}; default:n'avez remporté aucun }} prix",
   "date": "{{val:date}}",
   "time": "Seul le formateur 'time' n'est pas disponible, il doit s'agir du formateur DateTime",
